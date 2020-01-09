@@ -27,57 +27,8 @@
         <canvas id="myChart2" width="0.02em" height=".02em"></canvas>
 
     </div>
-    <script>
-        var intervalID = setInterval(update_values, 1000);
-        var c = 0;
-        var temp;
-        function update_values() {
-            $.getJSON('0.0.0.0:8082' + '/_stuff',
-                function (data) {
-                    $('#result').text(data.result);
-                    temp = data.result;
-                    console.log('data',temp)
+    <script language="JavaScript" src="livePlotting.js?n=1"></script>
 
-                });
-            c = c + 1;
-            console.log('c',c);
-            console.log('temp',temp);
-            myChart.data.labels.push(c);
-            myChart.data.datasets.forEach((dataset) => {
-                dataset.data.push(0.8);
-            });
-            myChart.update();
-        };
-
-        var ctx = document.getElementById('myChart');
-        var myChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: [c],
-                datasets: [{
-                    label: '# of people visiting market',
-                    data: [temp],
-                    backgroundColor: [
-                        'rgba(102,255,153,1)',
-                    ],
-                    borderColor: [
-                        'rgba(255,0,0,1)',
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                }
-            }
-
-        });
-    </script>
 </body>
 
 </html>

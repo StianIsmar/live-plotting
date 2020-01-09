@@ -7,14 +7,17 @@ import random
 
 app = Flask(__name__)
 
-@app.route('/_stuff',methods = ['GET'])
+@app.route('/_stuff', methods = ['GET'])
 
 def stuff():
-    return jsonify(result = random.randint(0,10))
+    response = jsonify(result = random.randint(0,10))
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
+
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
 if __name__=='__main__':
-    app.run(host='0.0.0.0', port=8082)
+    app.run()
