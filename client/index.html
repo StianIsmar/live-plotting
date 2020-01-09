@@ -14,18 +14,32 @@
         body {
             font-family: 'Roboto',
                 sans-serif;
-                background-color: black;
-                text-align: center;
+            background-color: black;
+            text-align: center;
         }
-        .header{
-          margin-top:40px;
-          height: 50px;
-          width: 100%;
-          color: #66FCF1;
-          display: inline-block;
-          font-size: 50px;
-          font-family: 'Major Mono Display', monospace;
 
+        .header {
+            margin-top: 40px;
+            height: 50px;
+            width: 100%;
+            color: rgb(180, 184, 183);
+            display: inline-block;
+            font-size: 50px;
+            font-family: 'Major Mono Display', monospace;
+            
+        }
+
+        #stop {
+            height: 50px;
+            width: 100px;
+            background-color: #C5C6C7;
+            padding: 0;
+            border: none;
+            font-family: 'Roboto',
+                sans-serif;
+                font-size: 
+                large;
+                color:#b4b8b7;
         }
     </style>
 
@@ -36,12 +50,12 @@
         <div class='header'>
             Live plotting
         </div>
-              
+
 
     </header>
     <h1>Live plotting </h1>
 
-    <button onclick="stop();">Stop</button>
+    <button id="stop">Stop</button>
     <div>
         <canvas id="myChart" width="0.02em" height="02em"></canvas>
         <canvas id="myChart2" width="0.02em" height=".02em"></canvas>
