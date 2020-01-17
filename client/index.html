@@ -26,7 +26,7 @@
             display: inline-block;
             font-size: 50px;
             font-family: 'Major Mono Display', monospace;
-            
+
         }
 
         #stop {
@@ -37,9 +37,34 @@
             border: none;
             font-family: 'Roboto',
                 sans-serif;
-                font-size: 
+            font-size:
                 large;
-                color:#b4b8b7;
+            color:  rgb(180, 150, 183);
+            font-family: 'Major Mono Display', monospace;
+
+        }
+        #stop:hover{
+            background-color: rgb(180, 184, 183);
+            color: black;
+  
+        }
+
+        #myChart {
+            height: 500px;
+        }
+        #plot-wrapper{
+            text-align: center;
+            display: inline-block;
+            width:60vw;
+            height: 20vh;
+        }
+        @media only screen and (max-width:500px) {
+            #plot-wrapper{
+            
+            width:90vw;
+            height:auto;
+        }
+        #stop{font-size: small;}  
         }
     </style>
 
@@ -55,10 +80,11 @@
     </header>
     <h1>Live plotting </h1>
 
-    <button id="stop">Stop</button>
+    <button id="stop">stop</button>
     <div>
-        <canvas id="myChart" width="0.02em" height="02em"></canvas>
-        <canvas id="myChart2" width="0.02em" height=".02em"></canvas>
+        <div id="plot-wrapper">
+            <canvas id="myChart"></canvas>
+        </div>
 
     </div>
     <script language="JavaScript" src="livePlotting.js?n=1"></script>
