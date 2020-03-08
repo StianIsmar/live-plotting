@@ -7,7 +7,6 @@ Experimenting with flask and graphjs for plotting dynamically.
 </p>
 
 
-![Live plotting screenshot](https://github.com/StianIsmar/live-plotting/blob/master/images/live-plotting.PNG)
 
 
 ### Build locally
