@@ -15,4 +15,4 @@ Experimenting with flask and graphjs for plotting dynamically.
 2. Open index.html (client folder) in your favourite browser
 
 
-
+Andrea har vært her :-) 
